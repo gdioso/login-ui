@@ -1,6 +1,7 @@
 html, body{
     margin: 0px;
     background-color: black;
+    color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
@@ -34,8 +35,8 @@ html, body{
     display: flex;
     border: solid 1px black;
     border-radius: 6px;
-    border: 1px solid rgb(221, 221, 228);
-    background-color: white;
+    border: 1px solid rgba(85, 8, 75, 0.1);
+    background-color: rgba(61, 25, 70, 0.1);
     min-width: 13.25%;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +44,8 @@ html, body{
     padding: 30px;
     padding-top: 20px;
     padding-bottom: 54px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     opacity: 0.89;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.301);
 }
@@ -55,7 +58,7 @@ html, body{
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 10px;
-    background-image: linear-gradient(to right, #4885ED 0 20%, #DB3236 20% 38%, #F4C20D 38% 56%, #4885ED 56% 75%, #3CBA54 75% 85%, #DB3236 85% 100%);
+    background-image: linear-gradient(to right, #2AF7CE, #40F7B6, #35AB81);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -72,29 +75,53 @@ html, body{
 input[type=email]{
     margin-top: 24px;
 }
+::placeholder{
+    color: rgb(243, 232, 232);
+}
 .box{
     font-size: 17px;
     padding: 15px;
+    padding-right: 30px;
     margin: 10px;
-    border: 1px solid rgb(221, 221, 228);
+    border: 1px solid rgba(85, 8, 75, 0.15);
     border-radius: 4px;
-    outline-color: #266eeb;
-    min-width: 13.15vw;
+    outline-color: #3D1946;
+    color: white;
+    background-color: rgba(68, 44, 75, 0.3);
+    opacity: 0.89;
+    min-width: 12.55vw;
+}
+#toggleVisibility{
+    position: absolute;
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 1;
 }
 .login-box #login-form label a{
-    align-self: flex-start;
+    align-self: flex-end;
     text-decoration: none;
     font-size: 13px;
     font-weight: bold;
-    color: #4885ED;
-    padding-left: 10px;
+    color: #64fac8;
+    margin-right: 10px;
     margin-bottom: 20px;
+    -webkit-transition: color 0.15s ease-out;
+    -moz-transition: color 0.15s ease-out;
+    transition: color 0.15s ease-out;
+}
+.login-box #login-form label a:hover{
+    color: #04db90;
+}
+.login-box #login-form label a:active{
+    color: #0abb7d;
 }
 #submit{
     font-weight: bold;
     font-size: 13px;
-    color: white;
-    background-color: #266eeb;
+    color: #3D1946;
+    background-image: linear-gradient(to right, #2AF7CE, #40F7B6, #35AB81);
     padding: 10px;
     margin-top: 5px;
     margin-right: 10px;
@@ -103,9 +130,15 @@ input[type=email]{
     border-radius: 4px;
     outline: none;
     align-self: stretch;
+    -webkit-transition: opacity 0.15s ease-out;
+    -moz-transition: opacity 0.15s ease-out;
+    transition: opacity 0.15s ease-out;
 }
 #submit:hover{
     cursor: pointer;
-    background-color: #3261b1;
+    opacity: 0.87;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.301);
+}
+#submit:active{
+    opacity: 0.77;
 }
