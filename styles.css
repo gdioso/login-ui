@@ -47,7 +47,7 @@ html, body{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     opacity: 0.89;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.301);
 }
 #login-form, label{
     display: flex;
@@ -72,11 +72,9 @@ html, body{
     line-height: 5px;
     margin: 15px;
 }
+
 input[type=email]{
     margin-top: 24px;
-}
-::placeholder{
-    color: rgb(243, 232, 232);
 }
 .box{
     font-size: 17px;
@@ -86,12 +84,10 @@ input[type=email]{
     border: 1px solid rgba(85, 8, 75, 0.15);
     border-radius: 4px;
     outline-color: #3D1946;
-    color: white;
-    background-color: rgba(68, 44, 75, 0.3);
-    opacity: 0.89;
     min-width: 12.55vw;
 }
 #toggleVisibility{
+    color: black;
     position: absolute;
     align-self: flex-end;
     margin-right: 20px;
